@@ -1,0 +1,111 @@
+/* Reset mặc định */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container chính */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Tiêu đề */
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+/* Bảng sản phẩm */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background: #3f5b78;
+    color: white;
+}
+
+/* Ảnh sản phẩm */
+table td img {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Căn chỉnh nút Actions */
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Nút Edit & Delete */
+.action-buttons a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 6px;
+    text-decoration: none;
+    min-width: 90px;
+    justify-content: center;
+}
+
+/* Nút Edit */
+.edit-btn {
+    background-color: #FFC107;
+    color: black;
+    border: 2px solid #FFA000;
+}
+
+.edit-btn:hover {
+    background-color: #FFB300;
+    border-color: #FF8F00;
+}
+
+/* Nút Delete */
+.delete-btn {
+    background-color: #F44336;
+    color: white;
+    border: 2px solid #D32F2F;
+}
+
+.delete-btn:hover {
+    background-color: #D32F2F;
+    border-color: #B71C1C;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+    
+    table td img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,226 @@
+/* Main Footer Styles */
+.footer {
+    position: relative;
+    width: 100%;
+    color: #e0e0e0;
+    background-color: #1c1c1c;
+    padding: 40px 0;
+    overflow: hidden;
+}
+
+/* Background Overlay */
+.footer-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    z-index: -1;
+}
+
+/* Footer Container */
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* Column Styles */
+.footer-col {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+/* Headings */
+.footer-heading {
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding-bottom: 12px;
+    letter-spacing: 0.5px;
+    position: relative;
+}
+
+.footer-heading:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 3px;
+    background: #e94560;
+}
+
+/* Links and Navigation */
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    color: #e0e0e0;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.footer-links a:hover {
+    color: #e94560;
+    transform: translateX(5px);
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 12px;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background: #e94560;
+    transform: translateY(-3px);
+}
+
+/* Newsletter Form */
+.newsletter-form {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.newsletter-form .form-control {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+}
+
+.newsletter-form .btn {
+    background: #e94560;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    padding: 10px 15px;
+    cursor: pointer;
+    color: #fff;
+    transition: 0.3s ease;
+}
+
+.newsletter-form .btn:hover {
+    background: #ff4d79;
+}
+
+/* Opening Hours Banner */
+.opening-hours-banner {
+    background: rgba(233, 69, 96, 0.1);
+    border-left: 4px solid #e94560;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 20px;
+    text-align: center;
+    color: #e0e0e0;
+}
+
+/* Copyright Section */
+.footer-copyright {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 15px 20px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.footer-policy-links {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-policy-links a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.footer-policy-links a:hover {
+    color: #e94560;
+}
+
+/* Logo and Slogan Styling */
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-logo img {
+    height: 40px;
+}
+
+.footer-slogan {
+    font-style: italic;
+    color: #e94560;
+    text-shadow: 0 0 5px rgba(233, 69, 96, 0.5);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .footer-heading:after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+    }
+
+    .newsletter-form .form-control {
+        border-radius: 4px;
+        margin-bottom: 10px;
+    }
+
+    .newsletter-form .btn {
+        border-radius: 4px;
+    }
+
+    .footer-policy-links {
+        justify-content: center;
+        margin-top: 10px;
+    }
+}

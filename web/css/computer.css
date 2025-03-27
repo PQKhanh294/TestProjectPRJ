@@ -1,0 +1,292 @@
+/* Reset và nền tổng thể */
+body {
+    background: linear-gradient(180deg, #1c2526 0%, #0f1419 100%); /* Nền tối sang trọng */
+    color: #e0e0e0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Container chính */
+.container {
+    margin: 50px auto;
+    max-width: 1400px;
+}
+
+/* Header */
+.header {
+    background: linear-gradient(135deg, #2e2e2e, #1a1a1a); /* Đen bóng gradient */
+    padding: 35px;
+    border-radius: 15px;
+    margin-bottom: 60px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6), inset 0 0 10px rgba(255, 215, 0, 0.2); /* Ánh vàng bên trong */
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #d4af37; /* Vàng ánh kim */
+    text-transform: uppercase;
+    position: relative;
+    border: 2px solid #d4af37; /* Viền vàng */
+}
+
+.header::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 15px;
+    background: linear-gradient(45deg, #d4af37, #ffffff, #d4af37);
+    opacity: 0.2;
+    z-index: -1;
+    animation: borderGlow 4s infinite;
+}
+
+@keyframes borderGlow {
+    0% { opacity: 0.2; }
+    50% { opacity: 0.5; }
+    100% { opacity: 0.2; }
+}
+
+/* Grid hiển thị máy tính */
+.computer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 4-5 máy trên hàng */
+    gap: 35px;
+    justify-content: center;
+}
+
+/* Card máy tính */
+.computer-card {
+    background: #1a1a1a; /* Đen bóng */
+    border-radius: 15px;
+    padding: 30px;
+    transition: all 0.4s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    border: 2px solid #d4af37; /* Viền vàng */
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.computer-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7), 0 0 20px rgba(212, 175, 55, 0.4);
+    border-color: #ffffff; /* Viền trắng sáng khi hover */
+}
+
+.computer-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(212, 175, 55, 0.15), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 0;
+}
+
+.computer-card:hover::before {
+    opacity: 1;
+}
+
+/* Tên máy tính */
+.computer-name {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 12px;
+    text-shadow: 0 0 8px rgba(212, 175, 55, 0.5);
+    z-index: 1;
+    position: relative;
+}
+
+/* ID máy tính */
+.computer-id {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #d4af37; /* Vàng ánh kim */
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1a1a1a;
+    font-weight: bold;
+    font-size: 1.2rem;
+    box-shadow: 0 0 12px rgba(212, 175, 55, 0.6);
+    z-index: 1;
+}
+
+/* Khu vực (Zone) */
+.computer-zone {
+    font-size: 1.1rem;
+    color: #b0b0b0;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    z-index: 1;
+    position: relative;
+}
+
+/* Trạng thái */
+.status-available, .status-booked, .status-maintenance {
+    padding: 8px 18px;
+    border-radius: 30px;
+    color: #ffffff;
+    font-size: 1rem;
+    display: inline-block;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    position: relative;
+    border: 1px solid #d4af37; /* Viền vàng */
+}
+
+.status-available {
+    background: #2ecc71; /* Xanh ngọc */
+    box-shadow: 0 0 12px rgba(46, 204, 113, 0.5);
+}
+
+.status-booked {
+    background: #e74c3c; /* Đỏ đậm */
+    box-shadow: 0 0 12px rgba(231, 76, 60, 0.5);
+}
+
+.status-maintenance {
+    background: #f39c12; /* Cam ánh kim */
+    box-shadow: 0 0 12px rgba(243, 156, 18, 0.5);
+}
+
+/* Nút Book Now */
+.btn-book {
+    background: linear-gradient(90deg, #d4af37, #f1c40f); /* Gradient vàng */
+    color: #1a1a1a;
+    border: none;
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.6);
+    z-index: 1;
+    position: relative;
+}
+
+.btn-book:hover {
+    background: linear-gradient(90deg, #f1c40f, #d4af37);
+    color: #ffffff;
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.9);
+}
+
+/* Icon máy tính */
+.computer-icon {
+    font-size: 3.2rem;
+    color: #d4af37;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.7));
+    z-index: 1;
+    position: relative;
+}
+
+/* Thông báo không có máy */
+.no-computers {
+    background: #1a1a1a;
+    padding: 60px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 1.4rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    border: 2px solid #d4af37;
+    color: #d4af37;
+}
+
+/* Nút Back to Home và Update Status */
+.btn-custom {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn-back {
+    background: linear-gradient(90deg, #2e2e2e, #1a1a1a); /* Đen bóng */
+    color: #d4af37;
+    border: 2px solid #d4af37;
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+}
+
+.btn-back:hover {
+    background: linear-gradient(90deg, #d4af37, #f1c40f);
+    color: #1a1a1a;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.8);
+    transform: scale(1.05);
+}
+
+.btn-back::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(212, 175, 55, 0.2), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.btn-back:hover::before {
+    opacity: 1;
+}
+
+.btn-update {
+    background: linear-gradient(90deg, #d4af37, #f1c40f); /* Vàng ánh kim */
+    color: #1a1a1a;
+    border: 2px solid #d4af37;
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+    margin-left: 15px;
+}
+
+.btn-update:hover {
+    background: linear-gradient(90deg, #f1c40f, #d4af37);
+    color: #ffffff;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.8);
+    transform: scale(1.05);
+}
+
+.btn-update::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.2), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.btn-update:hover::before {
+    opacity: 1;
+}
+
+.btn-custom i {
+    margin-right: 8px;
+    filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.5));
+}

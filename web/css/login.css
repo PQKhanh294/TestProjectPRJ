@@ -1,0 +1,47 @@
+body {
+    background: #f8f9fa;
+}
+
+/* Đưa form lên cao hơn */
+.login-box {
+    margin-top: -100px;
+}
+
+/* Input đẹp hơn */
+.input-box {
+    background: #f2f2f2;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+}
+.input-box:focus {
+    background: #ffffff;
+    border: 1px solid #007bff;
+    box-shadow: none;
+}
+
+/* Nút Register */
+.btn-outline-secondary {
+    border-radius: 20px;
+    padding: 10px;
+}
+.btn-outline-secondary:hover {
+    background-color: #6c757d;
+    color: white;
+}
+/* Nút Register màu xanh lá */
+.btn-success {
+    background-color: #28a745; /* Màu xanh lá */
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+}
+.btn-success:hover {
+    background-color: #218838; /* Màu xanh đậm hơn khi hover */
+}
+.text-success {
+    color: #28a745; /* Màu xanh lá */
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+}

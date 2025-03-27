@@ -1,0 +1,99 @@
+/* Định dạng chung */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container chính */
+.payment-container {
+    background: white;
+    width: 450px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Tiêu đề */
+.payment-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Thông tin đơn hàng */
+.order-summary {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.order-summary h3 {
+    color: #444;
+    margin-bottom: 5px;
+}
+
+.order-summary p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #d9534f;
+}
+
+/* Các phương thức thanh toán */
+.payment-options {
+    margin-bottom: 20px;
+}
+
+.payment-options label {
+    display: block;
+    background: #fff;
+    padding: 12px;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 10px;
+}
+
+.payment-options input {
+    display: none;
+}
+
+/* Hiệu ứng chọn phương thức */
+.payment-options label:hover,
+.payment-options input:checked + label {
+    border-color: #28a745;
+    background: #e8f5e9;
+    color: #28a745;
+}
+
+/* Nút thanh toán */
+.btn-confirm {
+    display: block;
+    width: 100%;
+    background: #28a745;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-confirm:hover {
+    background: #218838;
+    transform: scale(1.05);
+}

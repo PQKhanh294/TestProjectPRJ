@@ -1,0 +1,161 @@
+:root {
+    --primary-blue: #2f6fff;
+    --secondary-blue: #4a90e2;
+    --soft-blue: #f0f4ff;
+    --success-green: #2ecc71;
+    --warning-yellow: #f1c40f;
+    --danger-red: #e74c3c;
+}
+
+body {
+    background-color: #ffffff;
+    font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+    color: #2c3e50;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container chính */
+.container-elegant {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 
+        0 10px 25px rgba(47, 111, 255, 0.1), 
+        0 5px 15px rgba(47, 111, 255, 0.05);
+    border: 1px solid rgba(47, 111, 255, 0.1);
+}
+
+/* Header section */
+.header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--soft-blue);
+}
+
+/* Tiêu đề trang */
+.page-title {
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--primary-blue);
+}
+
+.page-title i {
+    margin-right: 15px;
+    color: var(--secondary-blue);
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+/* Nút button */
+.btn-custom {
+    background-color: var(--primary-blue);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-custom:hover {
+    background-color: var(--secondary-blue);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(47, 111, 255, 0.2);
+}
+
+/* Bảng */
+.table-elegant {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    border-collapse: collapse;
+}
+
+.table-elegant thead {
+    background-color: var(--soft-blue);
+    color: var(--primary-blue);
+}
+
+.table-elegant thead th {
+    font-weight: 600;
+    border: none;
+    padding: 15px;
+    text-align: left;
+}
+
+.table-elegant tbody tr {
+    transition: all 0.3s ease;
+}
+
+.table-elegant tbody tr:hover {
+    background-color: rgba(47, 111, 255, 0.08);
+}
+
+/* Trạng thái */
+.status-tag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    width: fit-content;
+}
+
+.status-confirmed {
+    background-color: rgba(46, 204, 113, 0.1);
+    color: var(--success-green);
+    border: 1px solid rgba(46, 204, 113, 0.3);
+}
+
+.status-pending {
+    background-color: rgba(241, 196, 15, 0.1);
+    color: var(--warning-yellow);
+    border: 1px solid rgba(241, 196, 15, 0.3);
+}
+
+.status-cancelled {
+    background-color: rgba(231, 76, 60, 0.1);
+    color: var(--danger-red);
+    border: 1px solid rgba(231, 76, 60, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container-elegant {
+        padding: 20px;
+    }
+
+    .page-title {
+        font-size: 1.5rem;
+    }
+
+    .btn-custom {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+
+    .table-elegant thead th {
+        padding: 12px;
+        font-size: 0.9rem;
+    }
+
+    .status-tag {
+        font-size: 0.7rem;
+        padding: 4px 10px;
+    }
+}
